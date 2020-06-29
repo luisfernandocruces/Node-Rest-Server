@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require("./routes/user"));
+// global config of routes
+app.use(require("./routes/index"));
 
 /**
  * If db does not exists... mongo can connect and then, when you use that db,
